@@ -1,0 +1,27 @@
+﻿<Window x:Class="ChatAppTCP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatAppTCP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Margin="50,0,0,0" Content="Online Users" Grid.Column="0" />
+        <ListView Height="400" Margin="10,30,10,10" ItemsSource="{Binding Users}">
+            
+            
+        </ListView>
+
+        <ListView Grid.Column="1" Height="300" Margin="10,-80,10,10" />
+        <TextBox Grid.Column="1" Height="40" Margin="10,350,150,10" />
+        <Button Content="Send" Grid.Column="1" Height="40" Width="80" Margin="400,340,0,0" />
+
+    </Grid>
+</Window>
